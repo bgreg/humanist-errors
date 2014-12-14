@@ -22,6 +22,8 @@ Or install it yourself as:
 
 TODO: Write usage instructions here
 
+This gem is intended for use in development environments only.
+
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/humanist-errors/fork )
