@@ -31,3 +31,8 @@ This gem is intended for use in development environments only.
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
+
+
+## TODO
+1. As a developer, when I make a syntax error I would like to see the humanist error output along
+   with the ruby output displayed at the command line so that I can better understand the mistake I made. 
