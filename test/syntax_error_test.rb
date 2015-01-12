@@ -50,11 +50,11 @@ class SyntaxErrorTest < Minitest::Test
 
   def test_message_for
     error = assert_raises(SyntaxError) {
-        eval('
-              def test
-                1
-              en 
-        ')
+      eval('
+        def test
+          1
+        en
+      ')
     }
     expected_message = HumanistErrors::MESSAGE_DICTIONARY[:syntax_error][:missing_block_closer]
     assert_match /#{@starting_token} #{expected_message} #{@ending_token}/, error.message
