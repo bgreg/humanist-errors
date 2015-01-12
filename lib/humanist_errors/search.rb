@@ -9,13 +9,19 @@ module HumanistErrors
     private 
 
     def find(error_object, ruby_error_message)
-      case error_object
-      when SyntaxError
-        HumanistErrors::ERROR_MAPPER[:syntax_error][ruby_error_message]
-      when NoMethodError
-        HumanistErrors::ERROR_MAPPER[:no_method_error][ruby_error_message]
-      end
+      klass = underscore(error_object.class.to_s)
+      HumanistErrors::ERROR_MAPPER[klass.to_sym][ruby_error_message]
     end
+
+    def underscore(string)
+      string
+        .gsub(/::/, '/')
+        .gsub(/([A-Z]+)([A-Z][a-z])/,'\1_\2')
+        .gsub(/([a-z\d])([A-Z])/,'\1_\2')
+        .tr("-", "_")
+        .downcase
+    end
+
   end
 end
 
