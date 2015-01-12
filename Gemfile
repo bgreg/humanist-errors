@@ -5,3 +5,4 @@ gemspec
 
 gem 'rspec'
 gem 'minitest'
+gem 'minitest-emoji'
