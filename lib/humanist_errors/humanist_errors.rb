@@ -12,6 +12,10 @@ module HumanistErrors
       string_formatter:      "% string formatter requires a string argument on the left, and a format argument on the right",
       missing_argument:      "You indicated that you wanted to send another argument, but we did not see anything.",
       missing_block_closer:  "a block or method was started, but you forgot to add 'end'",
+    },
+
+    no_method_error: {
+      undefined_method_for_nil: "Most likely you forgot to define the variable, or it was turned to nil along the way."
     }
   }
 
@@ -24,6 +28,9 @@ module HumanistErrors
       /syntax error, unexpected end-of-input/        => MESSAGE_DICTIONARY[:syntax_error][:missing_argument],
       /.*/ => :no_result
     ],
-    no_method_error: HumanistErrors::RegexHash[],
+    no_method_error: HumanistErrors::RegexHash[
+      /undefined method `.*' for nil:NilClass/       => MESSAGE_DICTIONARY[:no_method_error][:undefined_method_for_nil],
+      /.*/ => :no_result
+    ],
   }
 end
