@@ -34,5 +34,4 @@ This gem is intended for use in development environments only.
 
 
 ## TODO
-1. As a developer, when I make a syntax error I would like to see the humanist error output along
-   with the ruby output displayed at the command line so that I can better understand the mistake I made. 
+1. Look at the C source, and re-evaluate the error message lookup approach we are using. 
