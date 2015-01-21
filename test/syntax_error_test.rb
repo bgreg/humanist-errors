@@ -70,9 +70,21 @@ class SyntaxErrorTest < Minitest::Test
 
   # no method error
   def test_message_for_undefined_method_on_nil
-    error            = assert_raises(NoMethodError) { eval('nil.nonexistentMethod') } 
+    error            = assert_raises(NoMethodError) { 
+      eval('nil.nonexistentMethod') 
+    } 
     expected_message = HumanistErrors::MESSAGE_DICTIONARY[:no_method_error][:undefined_method_for_nil]
     assert_match /#{@starting_token} #{expected_message} #{@ending_token}/, error.message
   end  
   # /no method error
+  
+  # name error
+  def test_message_for_random_undefined_word
+    error = assert_raises(NameError) { 
+      eval('asdf') 
+    } 
+    expected_message = HumanistErrors::MESSAGE_DICTIONARY[:name_error][:undefined_word]
+    assert_match /#{@starting_token} #{expected_message} #{@ending_token}/, error.message
+  end
+  # / name error
 end

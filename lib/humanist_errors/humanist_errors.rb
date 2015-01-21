@@ -13,9 +13,11 @@ module HumanistErrors
       missing_argument:      "You indicated that you wanted to send another argument, but we did not see anything.",
       missing_block_closer:  "a block or method was started, but you forgot to add 'end'",
     },
-
     no_method_error: {
       undefined_method_for_nil: "Most likely you forgot to define the variable, or it was turned to nil along the way."
+    }, 
+    name_error: {
+      undefined_word:  "You typed a random string that wasn't defined. It is not a method or variable in this class, or it's ancestors"
     }
   }
 
@@ -29,8 +31,12 @@ module HumanistErrors
       /.*/ => :no_result
     ],
     no_method_error: HumanistErrors::RegexHash[
-      /undefined method `.*' for nil:NilClass/       => MESSAGE_DICTIONARY[:no_method_error][:undefined_method_for_nil],
+      /undefined method `.*' for nil:NilClass/ => MESSAGE_DICTIONARY[:no_method_error][:undefined_method_for_nil],
       /.*/ => :no_result
     ],
+    name_error: HumanistErrors::RegexHash[
+      /undefined local variable or method `.*'/ => MESSAGE_DICTIONARY[:name_error][:undefined_word],
+      /.*/ => :no_result
+    ]
   }
 end
