@@ -1,7 +1,7 @@
 module HumanistErrors
   module Human
-    def message
-      searcher = HumanistErrors::Search.new(self, super)
+    def to_s
+      searcher = HumanistErrors::Search.new(self.class, super)
       if searcher.found_error == :no_result
         super
       else

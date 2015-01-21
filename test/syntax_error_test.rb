@@ -55,7 +55,7 @@ class SyntaxErrorTest < Minitest::Test
     assert_match /#{@starting_token} #{expected_message} #{@ending_token}/, error.message
   end
 
-  def test_message_for
+  def test_message_for_missing_block_closer
     error = assert_raises(SyntaxError) {
       eval('
         def test

@@ -9,7 +9,7 @@ module HumanistErrors
     private 
 
     def find(error_object, ruby_error_message)
-      klass = underscore(error_object.class.to_s)
+      klass = underscore(error_object.to_s)
       HumanistErrors::ERROR_MAPPER[klass.to_sym][ruby_error_message]
     end
 
@@ -21,7 +21,6 @@ module HumanistErrors
         .tr("-", "_")
         .downcase
     end
-
   end
 end
 

@@ -1,5 +1,4 @@
 require_relative 'human'
-
 class SyntaxError
   include HumanistErrors::Human
 end
