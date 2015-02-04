@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/bgreg/humanist-errors/badges/gpa.svg)](https://codeclimate.com/github/bgreg/humanist-errors)
+
 # Humanist::Errors
 
 TODO: Write a gem description
