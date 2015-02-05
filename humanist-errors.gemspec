@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'humanist_errors/errors/version'
+require 'humanist_errors/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "humanist-errors"
-  spec.version       = HumanistErrors::Errors::VERSION
+  spec.version       = HumanistErrors::VERSION
   spec.authors       = ["Chester Law", "Greg McGuirk"]
   spec.email         = ["chesterlaw@me.com", "bgregmc@icloud.com"]
   spec.summary       = %q{More readable and friendly errors, for humans.}

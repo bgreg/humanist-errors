@@ -1,5 +1,7 @@
-require_relative 'monkey'
-require_relative 'regex_hash'
+require 'humanist_errors/version'
+require 'humanist_errors/human'
+require 'humanist_errors/monkey'
+require 'humanist_errors/regex_hash'
 
 module HumanistErrors
   STARTING_TOKEN = "Hi!\n"
