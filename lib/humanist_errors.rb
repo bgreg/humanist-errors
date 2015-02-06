@@ -1,5 +1,5 @@
 require 'humanist_errors/version'
-require 'humanist_errors/human'
+require 'humanist_errors/exception_extensions'
 require 'humanist_errors/monkey'
 require 'humanist_errors/regex_hash'
 
