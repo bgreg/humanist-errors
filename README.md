@@ -1,4 +1,4 @@
-[![Code Climate](https://codeclimate.com/github/bgreg/humanist-errors/badges/gpa.svg)](https://codeclimate.com/github/bgreg/humanist-errors)[![Test Coverage](https://codeclimate.com/github/bgreg/humanist-errors/badges/coverage.svg)](https://codeclimate.com/github/bgreg/humanist-errors)
+[![Code Climate](https://codeclimate.com/github/bgreg/humanist-errors/badges/gpa.svg)](https://codeclimate.com/github/bgreg/humanist-errors)[![Test Coverage](https://codeclimate.com/github/bgreg/humanist-errors/badges/coverage.svg)](https://codeclimate.com/github/bgreg/humanist-errors)[![Build Status](https://travis-ci.org/bgreg/humanist-errors.svg?branch=master)](https://travis-ci.org/bgreg/humanist-errors)
 
 # Humanist::Errors
 
