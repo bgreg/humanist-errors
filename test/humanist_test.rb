@@ -1,4 +1,4 @@
-require_relative  '../test_helper'
+require_relative '../test_helper'
 
 class HumanistTest < Minitest::Test
   def test_error_mapper_for_syntax_error

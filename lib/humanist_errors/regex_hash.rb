@@ -3,11 +3,10 @@ module HumanistErrors
     def [](value)
       result = self.select{|k| k =~ value}
       if result.empty?
-        raise KeyError, "Could not find Ruby message in dictionary: #{value}"
+        raise NoMethodError, "Could not find Ruby message in dictionary: #{value}"
       else
         result.shift[1]
       end
     end
   end
 end
-

@@ -1,10 +1,11 @@
-require "codeclimate-test-reporter"
-CodeClimate::TestReporter.start
+# require "codeclimate-test-reporter"
+# CodeClimate::TestReporter.start
 
 require 'humanist_errors'
 require 'humanist_errors/search'
 require 'minitest/autorun'
 require 'minitest/emoji'
+require 'minitest/focus'
 
 module HumanistErrorsSupport
   def assert_message(message, error)
