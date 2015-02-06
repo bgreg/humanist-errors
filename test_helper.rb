@@ -1,3 +1,6 @@
+require "codeclimate-test-reporter"
+CodeClimate::TestReporter.start
+
 require 'humanist_errors'
 require 'humanist_errors/search'
 require 'minitest/autorun'

@@ -5,3 +5,5 @@ gemspec
 
 gem 'minitest'
 gem 'minitest-emoji'
+gem "codeclimate-test-reporter", require: nil
+
