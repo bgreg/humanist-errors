@@ -1,4 +1,4 @@
-class RegexHashTest< Minitest::Test
+class RegexHashTest < Minitest::Test
 
   def a_regex_search_happens_on_key_send_test
     magic_string_hash = RegexHash.new["findme" => "hurray!"]
