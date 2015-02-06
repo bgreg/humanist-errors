@@ -1,11 +1,6 @@
 require_relative  '../test_helper'
 
 class HumanistTest < Minitest::Test
-  def setup
-    @starting_token = HumanistErrors::STARTING_TOKEN
-    @ending_token   = HumanistErrors::ENDING_TOKEN
-  end
-
   def test_error_mapper_for_syntax_error
     humanist_message = HumanistErrors::ERROR_MAPPER[:syntax_error]["syntax error, unexpected ';'"]
     real_humanist_message = HumanistErrors::MESSAGE_DICTIONARY[:syntax_error][:unexpected_semi_colon]
