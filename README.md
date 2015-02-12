@@ -2,6 +2,8 @@
 
 # Humanist::Errors
 
+[![Join the chat at https://gitter.im/bgreg/humanist-errors](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/bgreg/humanist-errors?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 TODO: Write a gem description
 
 ## Installation
