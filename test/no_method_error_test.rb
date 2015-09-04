@@ -1,3 +1,4 @@
+require 'minitest/autorun'
 require_relative '../test_helper'
 
 class NoMethodErrorTest < Minitest::Test
@@ -10,5 +11,4 @@ class NoMethodErrorTest < Minitest::Test
     expected_message = HumanistErrors::MESSAGE_DICTIONARY[:no_method_error][:undefined_method_for_nil]
     assert_message(expected_message, error)
   end  
-
 end

@@ -1,3 +1,6 @@
+require 'minitest/focus'
+require 'minitest/emoji'
+require 'minitest/autorun'
 require_relative '../test_helper'
 
 class HumanistTest < Minitest::Test
