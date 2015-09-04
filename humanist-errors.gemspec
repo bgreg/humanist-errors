@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["chesterlaw@me.com", "bgregmc@icloud.com"]
   spec.summary       = %q{More readable and friendly errors, for humans.}
   spec.description   = %q{This gem appends on the Ruby error output to give a most likely explanation of the problem, as well as in more understandable terms.}
-  spec.homepage      = ""
+  spec.homepage      = "www.gregmcguirk.com"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
@@ -18,6 +18,7 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
+  spec.required_ruby_version = '>= 2.0.0'
   spec.add_development_dependency "bundler", "~> 1.7"
   spec.add_development_dependency "rake", "~> 10.0"
 end

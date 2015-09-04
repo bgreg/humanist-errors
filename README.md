@@ -38,6 +38,35 @@ This gem is intended for use in development environments only.
 
 
 ## TODO
-1. Look at the C source, and re-evaluate the error message lookup approach we are using. 
-2. Stop patching individual exceptions. 
+1. Look at the C source, and re-evaluate the error message lookup approach we are using.
+2. Stop patching individual exceptions.
 2. Testing strategy could be improved.  Look at simply raising exceptions instead of trying to eval syntax errors
+
+High level exception tree:
+----
+Exception
+  NoMethodError
+  ScriptError
+    LoadError
+    NotImplementedError
+    SyntaxError
+  SignalException
+    Interrupt
+  StandardError
+    ArgumentError
+    IOError
+      EOFError
+    IndexError
+    LocalJumpError
+    NameError
+      NoMethodError
+    RangeError
+      FloatDomainError
+    RuntimeError
+    SecurityError
+    SystemCallError
+    SystemStackError
+    ThreadError
+    ZeroDivisionError
+  SystemExit
+  fatal
