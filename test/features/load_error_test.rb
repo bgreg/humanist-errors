@@ -1,2 +1,5 @@
-# LoadError
-# cannot load such file -- minitest/autorun
+require 'test_helper'
+
+class LoadErrorTest < Minitest::Test
+end
+

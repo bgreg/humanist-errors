@@ -1,5 +1,4 @@
-require 'minitest/autorun'
-require_relative '../test_helper'
+require 'test_helper'
 
 class NoMethodErrorTest < Minitest::Test
   include HumanistErrorsSupport
