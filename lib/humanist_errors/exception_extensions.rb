@@ -2,6 +2,7 @@ module HumanistErrors
   module ExceptionExtensions
     def to_s
       searcher = HumanistErrors::Search.new(self.class, super)
+      puts "searcher.found_error: #{searcher.found_error.inspect}"
       if searcher.found_error == :no_result
         super
       else

@@ -1,17 +1,20 @@
 module HumanistErrors
   class Search
     attr_accessor :found_error
+    attr_accessor :error_object, :ruby_error_message
 
     def initialize(error_object, ruby_error_message)
-      @found_error = find(error_object, ruby_error_message)
+      @error_object = error_object
+      @ruby_error_message = ruby_error_message 
     end
 
-    private 
-
-    def find(error_object, ruby_error_message)
+    def find
       klass = underscore(error_object.to_s)
-      HumanistErrors::ERROR_MAPPER[klass.to_sym][ruby_error_message]
+      @found_error = HumanistErrors::ERROR_MAPPER[klass.to_sym][ruby_error_message]
+      @found_error || :no_result
     end
+
+    private
 
     def underscore(string)
       string

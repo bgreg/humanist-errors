@@ -10,3 +10,7 @@
 
 :name_error:
   :undefined_word: "You typed a random string that wasn't defined. It is not a method or variable in this class, or it's ancestors"
+
+:zero_division_error:
+  :divide_by_zero: "Science has not figured out how to divide by zero yet. Damn you science!!!"
+
