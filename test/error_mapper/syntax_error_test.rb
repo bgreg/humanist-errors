@@ -1,18 +1,20 @@
 require "test_helper"
 
 class SyntaxErrorTest < Minitest::Test
-  def test_error_mapper_for_syntax_error
-    humanist_message = HumanistErrors::ERROR_MAPPER[:syntax_error]["syntax error, unexpected ';'"]
-    real_humanist_message = HumanistErrors::MESSAGE_DICTIONARY[:syntax_error][:unexpected_semi_colon]
-    assert_match(humanist_message, real_humanist_message)
-  end
+  include HumanistErrorsSupport
 
+  def test_error_mapper_for_syntax_error
+    ruby_error = "syntax error, unexpected ';'"
+    result = HumanistErrors::ERROR_MAPPER[:syntax_error][ruby_error]
+    assert_result(result)
+    assert_match(result, HumanistErrors::MESSAGE_DICTIONARY[:syntax_error][:unexpected_semi_colon])
+  end
 
   def test_unexpected_semicolon
     ruby_message = "syntax error, unexpected ';'"
-    syntax_error = SyntaxError.new
-    search = HumanistErrors::Search.new(syntax_error, ruby_message)
-    assert_match(search.found_error, HumanistErrors::MESSAGE_DICTIONARY[:syntax_error][:unexpected_semi_colon])
+    result = HumanistErrors::ERROR_MAPPER[:syntax_error][ruby_message] 
+    assert_result(result)
+    assert_match(result, HumanistErrors::MESSAGE_DICTIONARY[:syntax_error][:unexpected_semi_colon])
   end
 
   def test_message_for_unexpected_semicolon

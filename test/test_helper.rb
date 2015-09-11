@@ -8,9 +8,8 @@ require 'minitest/emoji'
 require 'minitest/autorun'
 
 module HumanistErrorsSupport
-  def assert_message(message, error)
-    message_string = [HumanistErrors::STARTING_TOKEN, message, HumanistErrors::ENDING_TOKEN].join(" ")
-    assert error.message.include?(message_string)
+  def assert_result(message)
+    assert(message != :no_result, "no result was found")
   end
 end
 

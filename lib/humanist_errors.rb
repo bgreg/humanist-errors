@@ -28,7 +28,7 @@ module HumanistErrors
       /.*/ => :no_result
     ],
     zero_division_error: HumanistErrors::RegexHash[
-      /divide by 0/ => MESSAGE_DICTIONARY[:zero_division_error][:divide_by_zero],
+      /divided by 0/ => MESSAGE_DICTIONARY[:zero_division_error][:divide_by_zero],
       /.*/ => :no_result
     ]
   }
