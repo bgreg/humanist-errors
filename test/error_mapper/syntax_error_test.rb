@@ -1,4 +1,4 @@
-require '../test_helper'
+require "test_helper"
 
 class SyntaxErrorTest < Minitest::Test
   def test_error_mapper_for_syntax_error

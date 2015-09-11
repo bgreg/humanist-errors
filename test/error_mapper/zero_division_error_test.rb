@@ -1,4 +1,3 @@
-require 'minitest/autorun'
 require 'test_helper'
 
 class ZeroDivisionErrorTest < Minitest::Test

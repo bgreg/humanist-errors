@@ -3,7 +3,6 @@
 
 require 'humanist_errors'
 require 'humanist_errors/search'
-
 require 'minitest/focus'
 require 'minitest/emoji'
 require 'minitest/autorun'
