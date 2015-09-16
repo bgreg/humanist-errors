@@ -2,6 +2,9 @@ require "bundler/gem_tasks"
 test = File.expand_path('../test', __FILE__)
 $LOAD_PATH.unshift(test) unless $LOAD_PATH.include?(test)
 
+require 'logger'
+# $logger = Logger.new('test.log')
+
 task default: :test
 
 task :test do
