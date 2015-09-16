@@ -39,4 +39,3 @@ module HumanistErrorsSupport
     reader.close
   end
 end
-
