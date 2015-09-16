@@ -1,5 +1,5 @@
 require 'test_helper'
 
-class NotImplementedError < Minitest::Test
+class NotImplementedErrorTest < Minitest::Test
   include HumanistErrorsSupport
 end

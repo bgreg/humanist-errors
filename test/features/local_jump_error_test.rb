@@ -1,5 +1,5 @@
 require 'test_helper'
 
-class LocalJumpError < Minitest::Test
+class LocalJumpErrorTest < Minitest::Test
 end
 
