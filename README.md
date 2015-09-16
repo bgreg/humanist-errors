@@ -38,9 +38,8 @@ This gem is intended for use in development environments only.
 
 
 ## TODO
-1. Look at the C source, and re-evaluate the error message lookup approach we are using.
-2. Stop patching individual exceptions.
-2. Testing strategy could be improved.  Look at simply raising exceptions instead of trying to eval syntax errors
+1) fill out tests for search.rb 
+2) reorganize error_mapper/feature tests
 
 High level exception tree:
 ----
