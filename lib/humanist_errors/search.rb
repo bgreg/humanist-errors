@@ -4,12 +4,12 @@ module HumanistErrors
     attr_accessor :error_object, :ruby_error_message
 
     def initialize(error_object, ruby_error_message)
-      @error_object = error_object
       @ruby_error_message = ruby_error_message 
+      @error_object       = error_object
     end
 
     def find
-      klass = underscore(error_object.to_s)
+      klass        = underscore(error_object.to_s)
       @found_error = HumanistErrors::ERROR_MAPPER[klass.to_sym][ruby_error_message]
       @found_error || :no_result
     end
