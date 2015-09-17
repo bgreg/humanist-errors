@@ -3,6 +3,12 @@ module HumanistErrors
     attr_accessor :found_error
     attr_accessor :error_object, :ruby_error_message
 
+    def self.run(error_object, ruby_error_message)
+      searcher = new(error_object, ruby_error_message)
+      searcher.find
+      searcher 
+    end
+
     def initialize(error_object, ruby_error_message)
       @ruby_error_message = ruby_error_message 
       @error_object       = error_object
