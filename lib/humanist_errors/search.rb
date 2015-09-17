@@ -15,8 +15,7 @@ module HumanistErrors
     end
 
     def find
-      klass        = underscore(error_object.to_s)
-      @found_error = HumanistErrors::ERROR_MAPPER[klass.to_sym][ruby_error_message]
+      @found_error = ERROR_MAPPER[underscore(error_object.to_s).to_sym][ruby_error_message]
       @found_error || :no_result
     end
 
