@@ -4,7 +4,8 @@
 
 [![Join the chat at https://gitter.im/bgreg/humanist-errors](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/bgreg/humanist-errors?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-TODO: Write a gem description
+Humanist errors is a system for extending ruby exception messages. 
+It will prepend the standard output with text defined in the humanist errors dictionary.
 
 ## Installation
 
@@ -24,9 +25,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Include humanist errors in your project, and when ever you want better errors wrap your code like this: 
 
-This gem is intended for use in development environments only.
+```ruby 
+with_human_errors do
+  #...
+end
+```
+This gem is intended for use in development and test environments only.
 
 ## Contributing
 
@@ -39,10 +45,10 @@ This gem is intended for use in development environments only.
 
 ## TODO
 1) fill out tests for search.rb 
-2) reorganize error_mapper/feature tests
 
 High level exception tree:
 ----
+```ruby
 Exception
   NoMethodError
   ScriptError
@@ -69,3 +75,4 @@ Exception
     ZeroDivisionError
   SystemExit
   fatal
+```
