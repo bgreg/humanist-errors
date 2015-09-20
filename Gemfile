@@ -2,9 +2,10 @@ source 'https://rubygems.org'
 
 gemspec
 
-gem 'minitest'
-gem 'minitest-emoji'
-gem 'minitest-focus'
-gem "codeclimate-test-reporter", group: :test, require: nil
-gem 'byebug', group: :test, require: nil
-
+group :test do
+  gem 'minitest', require: nil
+  gem 'minitest-emoji', require: nil
+  gem 'minitest-focus', require: nil
+  gem "codeclimate-test-reporter", require: nil
+  gem 'byebug', require: nil
+end
