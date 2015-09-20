@@ -1,8 +1,9 @@
 require "bundler/gem_tasks"
+require "byebug"
 test = File.expand_path('../test', __FILE__)
 $LOAD_PATH.unshift(test) unless $LOAD_PATH.include?(test)
 
-require 'logger'
+# require 'logger'
 # $logger = Logger.new('test.log')
 
 task default: :test
@@ -17,4 +18,8 @@ end
 
 task :test_features do
   Dir.glob('./test/features/*_test.rb').each { |file| require file}
+end
+
+task :search_test do
+  require './test/search_test.rb'
 end
