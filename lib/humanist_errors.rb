@@ -17,6 +17,3 @@ module HumanistErrors
 end
 
 require 'humanist_errors/error_mapper'
-
-
-
