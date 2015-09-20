@@ -6,11 +6,11 @@ require 'humanist_errors/version'
 Gem::Specification.new do |spec|
   spec.name          = "humanist-errors"
   spec.version       = HumanistErrors::VERSION
-  spec.authors       = ["Chester Law", "Greg McGuirk"]
-  spec.email         = ["chesterlaw@me.com", "bgregmc@icloud.com"]
+  spec.authors       = ["Greg McGuirk"]
+  spec.email         = ["bgregmc@icloud.com"]
   spec.summary       = %q{More readable and friendly errors, for humans.}
-  spec.description   = %q{This gem appends on the Ruby error output to give a most likely explanation of the problem, as well as in more understandable terms.}
-  spec.homepage      = "www.gregmcguirk.com"
+  spec.description   = %q{This gem appends a new message to the standard exception message, written from the perspective of a person instead of a complier.}
+  spec.homepage      = "http://github.com/bgreg/humanist-errors"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
