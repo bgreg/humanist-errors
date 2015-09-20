@@ -5,30 +5,31 @@ module HumanistErrors
 
     def self.run(error_object, ruby_error_message)
       searcher = new(error_object, ruby_error_message)
-      searcher.find
+      searcher.found_error = searcher.find
       searcher
     end
 
     def initialize(error_object, ruby_error_message)
+      @error_object = error_object
       @ruby_error_message = ruby_error_message
-      @error_object       = error_object
     end
 
     def find
-      error_sym    = underscore(error_object.to_s).to_sym
-      @found_error = ERROR_MAPPER.fetch(error_sym, {})[ruby_error_message]
-      @found_error ||= :no_result
+      error = keyify(error_object)
+      return :no_result unless ERROR_MAPPER.keys.include?(error)
+      ERROR_MAPPER[error][ruby_error_message]
     end
 
     private
 
-    def underscore(string)
-      string
-        .gsub(/::/, '/')
+    def keyify(error)
+      error.to_s
+        .gsub(/::/, '__')
         .gsub(/([A-Z]+)([A-Z][a-z])/,'\1_\2')
         .gsub(/([a-z\d])([A-Z])/,'\1_\2')
         .tr("-", "_")
         .downcase
+        .to_sym
     end
   end
 end

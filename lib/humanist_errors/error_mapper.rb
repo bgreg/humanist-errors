@@ -10,15 +10,15 @@ module HumanistErrors
     ],
     no_method_error: HumanistErrors::RegexHash[
       /undefined method `.*' for nil:NilClass/ => MESSAGE_DICTIONARY[:no_method_error][:undefined_method_for_nil],
-      /.*/ => :no_result
+      /.*/                                     => :no_result
     ],
     name_error: HumanistErrors::RegexHash[
       /undefined local variable or method `.*'/ => MESSAGE_DICTIONARY[:name_error][:undefined_word],
-      /.*/ => :no_result
+      /.*/                                      => :no_result
     ],
     zero_division_error: HumanistErrors::RegexHash[
       /divided by 0/ => MESSAGE_DICTIONARY[:zero_division_error][:divide_by_zero],
-      /.*/ => :no_result
+      /.*/           => :no_result
     ]
   }
 end
