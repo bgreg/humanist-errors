@@ -7,7 +7,9 @@ module HumanistErrors
       else
         "\n#{STARTING_TOKEN}"+
         "#{COLORS[:cyan]}#{searcher.found_error}\n"+
-        "#{ENDING_TOKEN}\n" + super
+        "#{ENDING_TOKEN}\n"+
+        "#{COLORS[:text_reset]}"
+        + super
       end
     end
   end
