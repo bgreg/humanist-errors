@@ -6,17 +6,18 @@ module HumanistErrors
     def self.run(error_object, ruby_error_message)
       searcher = new(error_object, ruby_error_message)
       searcher.find
-      searcher 
+      searcher
     end
 
     def initialize(error_object, ruby_error_message)
-      @ruby_error_message = ruby_error_message 
+      @ruby_error_message = ruby_error_message
       @error_object       = error_object
     end
 
     def find
-      @found_error = ERROR_MAPPER[underscore(error_object.to_s).to_sym][ruby_error_message]
-      @found_error || :no_result
+      error_sym    = underscore(error_object.to_s).to_sym
+      @found_error = ERROR_MAPPER.fetch(error_sym, {})[ruby_error_message]
+      @found_error ||= :no_result
     end
 
     private
