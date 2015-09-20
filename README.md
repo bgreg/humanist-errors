@@ -44,7 +44,7 @@ This gem is intended for use in development and test environments only.
 
 
 ## TODO
-1) fill out tests for search.rb 
+1) add more errors to error_map
 
 High level exception tree:
 ----
