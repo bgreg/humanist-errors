@@ -35,7 +35,7 @@ module HumanistErrorsSupport
 
     writer.close
     reader.gets(nil)
-  ensure 
+  ensure
     reader.close
   end
 end
