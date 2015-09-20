@@ -5,11 +5,11 @@ module HumanistErrors
       if searcher.found_error == :no_result
         super
       else
+        color = Color.new
         "\n#{STARTING_TOKEN}"+
-        "#{COLORS[:cyan]}#{searcher.found_error}\n"+
-        "#{ENDING_TOKEN}\n"+
-        "#{COLORS[:text_reset]}"
-        + super
+        "#{color.blue(searcher.found_error)}\n"+
+        "#{ENDING_TOKEN}" +
+        super
       end
     end
   end

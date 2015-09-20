@@ -6,8 +6,9 @@ require 'humanist_errors/search'
 require 'humanist_errors/colors'
 
 module HumanistErrors
-  STARTING_TOKEN     = "#{COLORS[:green]}Hi!\n"
-  ENDING_TOKEN       = "#{COLORS[:green]}Here's the error from Ruby: "
+  color = Color.new
+  STARTING_TOKEN     = color.green("Hi!\n")
+  ENDING_TOKEN       = color.green("Here's the error from Ruby: \n")
   MESSAGE_DICTIONARY = YAML.load(File.read(File.expand_path('../../dictionaries/humanist_errors.en.yml', __FILE__)))
 
   def with_human_errors

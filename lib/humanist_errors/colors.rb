@@ -1,40 +1,37 @@
 module HumanistErrors
-  COLORS = {
-    cyan:              '\e[36m',
-    green:             '\e[92m',
-    red:               '\e[31m',
-    black_regular:     '\e[0;30m',
-    red:               '\e[0;31m',
-    green:             '\e[0;32m',
-    yellow:            '\e[0;33m',
-    blue:              '\e[0;34m',
-    purple:            '\e[0;35m',
-    cyan:              '\e[0;36m',
-    white:             '\e[0;37m',
-    black_bold:        '\e[1;30m',
-    red:               '\e[1;31m',
-    green:             '\e[1;32m',
-    yellow:            '\e[1;33m',
-    blue:              '\e[1;34m',
-    purple:            '\e[1;35m',
-    cyan:              '\e[1;36m',
-    white:             '\e[1;37m',
-    black_underline:   '\e[4;30m',
-    red:               '\e[4;31m',
-    green:             '\e[4;32m',
-    yellow:            '\e[4;33m',
-    blue:              '\e[4;34m',
-    purple:            '\e[4;35m',
-    cyan:              '\e[4;36m',
-    white:             '\e[4;37m',
-    black_background:  '\e[40m',
-    red:               '\e[41m',
-    green:             '\e[42m',
-    yellow:            '\e[43m',
-    blue:              '\e[44m',
-    purple:            '\e[45m',
-    cyan:              '\e[46m',
-    white:             '\e[47m',
-    text_reset:        '\e[0m'
-  }
+  class Color
+
+    def black(sting)
+      "\033[30m#{string}\033[0m"
+    end
+
+    def red(sting)
+      "\033[31m#{string}\033[0m"
+    end
+
+    def green(sting)
+      "\033[32m#{string}\033[0m"
+    end
+
+    def brown(sting)
+      "\033[33m#{string}\033[0m"
+    end
+
+    def blue(sting)
+      "\033[34m#{string}\033[0m"
+    end
+
+    def magenta(sting)
+      "\033[35m#{string}\033[0m"
+    end
+
+    def cyan(sting)
+      "\033[36m#{string}\033[0m"
+    end
+
+    def gray(sting)
+      "\033[37m#{string}\033[0m"
+    end
+
+  end
 end
