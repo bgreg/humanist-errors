@@ -1,19 +1,18 @@
 [![Code Climate](https://codeclimate.com/github/bgreg/humanist-errors/badges/gpa.svg)](https://codeclimate.com/github/bgreg/humanist-errors)[![Test Coverage](https://codeclimate.com/github/bgreg/humanist-errors/badges/coverage.svg)](https://codeclimate.com/github/bgreg/humanist-errors)[![Build Status](https://travis-ci.org/bgreg/humanist-errors.svg?branch=master)](https://travis-ci.org/bgreg/humanist-errors)
 
-# Humanist::Errors
+# Error messages for Humans.
 
 [![Join the chat at https://gitter.im/bgreg/humanist-errors](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/bgreg/humanist-errors?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-Humanist errors is a system for extending ruby exception messages. 
+Humanist errors is a system for extending ruby exception messages.
 It will prepend the standard output with text defined in the humanist errors dictionary.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-```ruby
-gem 'humanist-errors'
-```
+	gem 'humanist-errors'
+
 
 And then execute:
 
@@ -23,15 +22,26 @@ Or install it yourself as:
 
     $ gem install humanist-errors
 
+
 ## Usage
 
-Include humanist errors in your project, and when ever you want better errors wrap your code like this: 
+Require the library and monkey file
 
-```ruby 
+	require humanist_errors
+	require humanist_errors/monkey
+
+If you want to only want to see new errors in an isolated area
+
+	include HumanistErrors
+
+Then your code in a human block:
+
+```ruby
 with_human_errors do
-  #...
+  #....
 end
 ```
+
 This gem is intended for use in development and test environments only.
 
 ## Contributing
@@ -46,8 +56,8 @@ This gem is intended for use in development and test environments only.
 ## TODO
 1) add more errors to error_map
 
-High level exception tree:
-----
+##### High level exception tree:
+
 ```ruby
 Exception
   NoMethodError

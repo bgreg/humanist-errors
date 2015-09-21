@@ -6,8 +6,8 @@ module HumanistErrors
         super
       else
         color = Color.new
-        "\n#{STARTING_TOKEN}"+
-        "\t#{color.cyan(searcher.found_error)}\n"+
+        "\n#{STARTING_TOKEN}" +
+        "\t#{color.cyan(searcher.found_error)}\n" +
         "#{ENDING_TOKEN}" +
         super
       end
