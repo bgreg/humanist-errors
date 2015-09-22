@@ -13,4 +13,3 @@ module HumanistErrors
     end
   end
 end
-
