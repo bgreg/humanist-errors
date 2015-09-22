@@ -1,0 +1,15 @@
+:syntax_error:
+  :unexpected_semi_colon: "oops"
+  :open_quote: "oop"
+  :string_formatter: "oop"
+  :missing_argument: "oops"
+  :missing_block_closer: "oops"
+
+:no_method_error:
+  :undefined_method_for_nil: "oops"
+
+:name_error:
+  :undefined_word: "oops"
+
+:zero_division_error:
+  :divide_by_zero: "oops"

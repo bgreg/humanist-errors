@@ -3,10 +3,10 @@
   :open_quote: "It looks like you typed an open quote near the end of the file."
   :string_formatter: "% string formatter requires a string argument on the left, and a format argument on the right"
   :missing_argument: "You indicated that you wanted to send another argument, but we did not see anything."
-  :missing_block_closer: "a block or method was started, but you forgot to add 'end'"
+  :missing_block_closer: "A block was started, but you forgot to add 'end'. Ruby tries to match every `do` with an `end`, but it reached the end of the file and a matching 'end' token was not found.  To fix this, review all the 'do..end' pairs."
 
 :no_method_error:
-  :undefined_method_for_nil: "Most likely you forgot to define the variable, or it was turned to nil along the way."
+  :undefined_method_for_nil: "You defined a variable with good intentions, then along the way, something turned it to nil."
 
 :name_error:
   :undefined_word: "You typed a random string that wasn't defined. It is not a method or variable in this class, or it's ancestors"
