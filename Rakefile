@@ -9,7 +9,11 @@ $LOAD_PATH.unshift(test) unless $LOAD_PATH.include?(test)
 task default: :test
 
 task :test do
-  Dir.glob(['./test/*_test.rb', './test/error_mapper/*_test.rb','./test/features/*_test.rb']).each { |file| require file}
+  Dir.glob(['./test/*_test.rb',
+            './test/error_mapper/*_test.rb',
+            './test/features/*_test.rb']).each do |file|
+    require file
+  end
 end
 
 task :test_error_mapper do

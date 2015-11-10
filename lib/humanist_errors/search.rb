@@ -4,7 +4,6 @@ module HumanistErrors
     def self.run(error_object, ruby_error_message)
       searcher = new(error_object, ruby_error_message)
       searcher.find
-      searcher
     end
 
     def initialize(error_object, ruby_error_message)
@@ -14,11 +13,12 @@ module HumanistErrors
 
     def find
       error = keyify(error_object)
-      return :no_result unless ERROR_MAPPER.keys.include?(error)
-      @found_error = ERROR_MAPPER[error][ruby_error_message]
+      return :no_result unless ERROR_MAPPER[error]
+      ERROR_MAPPER[error][ruby_error_message]
     end
 
     private
+
     attr_reader :error_object, :ruby_error_message, :found_error
 
     # turn a CamelCase word into an underscored
