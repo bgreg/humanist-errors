@@ -4,8 +4,8 @@
 
 [![Join the chat at https://gitter.im/bgreg/humanist-errors](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/bgreg/humanist-errors?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-Humanist errors is a system for extending ruby exception messages.
-It will prepend the standard output with text defined in the humanist errors dictionary.
+Humanist errors is a system for extending ruby exception messages.  It will prepend the standard output with text
+defined in the humanist errors dictionary that hopefully explains what is going on a little better.
 
 ## Installation
 
@@ -25,28 +25,39 @@ Or install it yourself as:
 
 ## Usage
 
+You can use humanist errors globally in your project, or only around specific pieces of code.
+To use globally:
+
 Require the library and monkey file
 
-	require humanist_errors
-	require humanist_errors/monkey
+	require 'humanist_errors'
+	require 'humanist_errors/monkey'
 
-If you want to only want to see new errors in an isolated area
+Thats it! No when ruby tries to evaluate an error like when you say: `1/0` you will see a new error message.
 
-	include HumanistErrors
 
-Then your code in a human block:
+Now, if you only want to see new errors in an isolated area you can include the library and execute
+your code inside a special code block.
 
-```ruby
-with_human_errors do
-  #....
-end
-```
+	1) Add these require statements to your file:
+  `require 'humanist_errors'`
+	`require 'humanist_errors/monkey'`
+
+  1) Include the humanist errors module:
+  `include HumanistErrors`
+
+  1) Then your code in a human block:
+    ```ruby
+    with_human_errors do
+      #....
+    end
+    ```
 
 This gem is intended for use in development and test environments only.
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/humanist-errors/fork )
+1. Fork it ( https://github.com/bgreg/humanist-errors/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
@@ -54,7 +65,7 @@ This gem is intended for use in development and test environments only.
 
 
 ## TODO
-1) add more errors to error_map
+1) add more errors from this list to the error_map
 
 ##### High level exception tree:
 
