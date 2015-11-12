@@ -14,6 +14,10 @@ module HumanistErrorsSupport
     assert(message != :no_result, "no result was found")
   end
 
+  def assert_no_result(message)
+    assert(message == :no_result, "no result was found")
+  end
+
   def assert_error_map(ruby_error, exception_symbol, error_symbol)
     result = HumanistErrors::ERROR_MAPPER[exception_symbol][ruby_error]
     assert_result(result)

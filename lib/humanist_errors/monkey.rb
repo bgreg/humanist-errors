@@ -1,1 +1,1 @@
-::Exception.send(:prepend, HumanistErrors::ExceptionExtensions)
+::Exception.__send__(:prepend, HumanistErrors::ExceptionExtensions)

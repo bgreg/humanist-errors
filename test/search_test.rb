@@ -4,8 +4,9 @@ class SearchTest < Minitest::Test
   def test_finds_a_human_error
     error = HumanistErrors::Search.run(
       NameError,
-     "NameError: undefined local variable or method `asdf' for main:Object")
-    expected_result = HumanistErrors::MESSAGE_DICTIONARY[:name_error][:undefined_word]
+     "NameError: undefined local variable or method `asdf' for main:Object"
+    )
+    expected_result =  HumanistErrors::MESSAGE_DICTIONARY[:name_error][:undefined_word]
     assert(error == expected_result, "#{error.inspect} does not equal: #{expected_result.inspect}")
   end
 
