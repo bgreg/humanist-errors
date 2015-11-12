@@ -6,9 +6,9 @@ module HumanistErrors
         super
       else
         color = Color.new
-        "\n#{STARTING_TOKEN}" \
-        "\t#{color.cyan(error)}\n" \
-        "#{ENDING_TOKEN}" + super
+        "\n\n#{STARTING_TOKEN}" \
+        " #{color.cyan(error)}\n" \
+        "#{ENDING_TOKEN}\n" + super
       end
     end
   end
