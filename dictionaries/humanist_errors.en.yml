@@ -9,7 +9,7 @@
   :undefined_method_for_nil: "You defined a variable with good intentions, then along the way, something turned it to nil."
 
 :name_error:
-  :undefined_word: "You typed a random string that wasn't defined. It is not a method or variable in this class, or it's ancestors"
+  :undefined_word: "You typed a random string that wasn't defined. It is not a method or variable in this class, or its ancestors"
 
 :zero_division_error:
   :divide_by_zero: "Science has not figured out how to divide by zero yet. Damn you science!!!"
