@@ -39,19 +39,22 @@ Thats it! No when ruby tries to evaluate an error like when you say: `1/0` you w
 Now, if you only want to see new errors in an isolated area you can include the library and execute
 your code inside a special code block.
 
-	1) Add these require statements to your file:
-  `require 'humanist_errors'`
-	`require 'humanist_errors/monkey'`
+1. Add these require statements to your file:
 
-  1) Include the humanist errors module:
+  `require 'humanist_errors'`
+
+  `require 'humanist_errors/monkey'`
+  
+2. Include the humanist errors module:
+
   `include HumanistErrors`
 
-  1) Then your code in a human block:
-    ```ruby
-    with_human_errors do
-      #....
-    end
-    ```
+3. Then your code in a human block:
+```ruby
+	with_human_errors do
+      		#....
+	end
+```
 
 This gem is intended for use in development and test environments only.
 
