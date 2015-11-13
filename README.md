@@ -6,7 +6,7 @@
 
 Humanist errors is a system for extending ruby exception messages.  It will prepend the standard output with text
 defined in the humanist errors dictionary that hopefully explains what is going on a little better.
-
+![img](https://cloud.githubusercontent.com/assets/3711139/11139081/9ed4493a-897f-11e5-8589-79a4e5930c94.png)
 ![img](https://cloud.githubusercontent.com/assets/3711139/11139050/3ccefb40-897f-11e5-8024-9062ce4787bf.png)
 
 
