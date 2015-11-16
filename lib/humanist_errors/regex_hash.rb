@@ -1,11 +1,10 @@
 module HumanistErrors
   class RegexHash < Hash
     def [](value)
-      result = self.select { |k| k =~ value }
-      if result.empty?
-        :no_result
-      else
-        result.shift[1]
+      detect(-> {:no_result}) do |k,v|
+        if k =~ value
+          return v
+        end
       end
     end
   end

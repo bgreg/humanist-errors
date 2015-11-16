@@ -27,3 +27,7 @@ end
 task :search_test do
   require './test/search_test.rb'
 end
+
+task :regex_test do
+  require './test/regex_hash_test.rb'
+end

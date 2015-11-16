@@ -3,7 +3,7 @@ require 'humanist_errors/version'
 require 'humanist_errors/exception_extensions'
 require 'humanist_errors/regex_hash'
 require 'humanist_errors/search'
-require 'humanist_errors/colors'
+require 'humanist_errors/color'
 
 module HumanistErrors
   color = Color.new

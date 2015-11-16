@@ -32,6 +32,5 @@ module HumanistErrors
     def gray(string)
       "\033[37m#{string}\033[0m"
     end
-
   end
 end
