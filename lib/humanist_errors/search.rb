@@ -23,6 +23,7 @@ module HumanistErrors
 
     # turn a CamelCase word into an underscored
     # symbol to make it nice for hash keys.
+    # Basically the same as ActiveSupport#underscore
     def keyify(error)
       error.to_s
         .gsub(/::/, '__')
