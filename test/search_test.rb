@@ -10,10 +10,10 @@ class SearchTest < Minitest::Test
     assert(error == expected_result, "#{error.inspect} does not equal: #{expected_result.inspect}")
   end
 
-  class DefinatelyNotARealException; end
+  class DefinitelyNotARealException; end
 
   def test_cannot_find_a_error_message
-    error = HumanistErrors::Search.run(DefinatelyNotARealException, "blah blah blah")
+    error = HumanistErrors::Search.run(DefinitelyNotARealException, "blah blah blah")
     assert(error == :no_result, "#{error.inspect} does not equal: :no_result")
   end
 end

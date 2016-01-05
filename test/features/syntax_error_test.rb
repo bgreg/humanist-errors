@@ -7,7 +7,7 @@ class SyntaxErrorTest < Minitest::Test
     assert_match(expected_message, error_message)
   end
 
-  def test_messge_for_missing_end
+  def test_message_for_missing_end
     error_message = human_fork(SyntaxError) do
       eval(
         " def stuff

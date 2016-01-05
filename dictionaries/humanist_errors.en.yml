@@ -14,3 +14,5 @@
 :zero_division_error:
   :divide_by_zero: "Science has not figured out how to divide by zero yet. Damn you science!!!"
 
+:load_error:
+	:no_file: "You tried to load a file that doesn't exist - at least, not where you think it is!"
