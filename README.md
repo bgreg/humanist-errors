@@ -39,10 +39,10 @@ Require the library and monkey file
 	require 'humanist_errors'
 	require 'humanist_errors/monkey'
 
-Thats it! No when ruby tries to evaluate an error like when you say: `1/0` you will see a new error message.
+Thats it! Now when ruby tries to evaluate an error like when you say: `1/0` you will see a new error message.
 
 
-Now, if you only want to see new errors in an isolated area you can include the library and execute
+If you only want to see new errors in an isolated area you can include the library and execute
 your code inside a special code block.
 
 1. Add these require statements to your file:
