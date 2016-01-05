@@ -19,6 +19,11 @@ module HumanistErrors
     zero_division_error: HumanistErrors::RegexHash[
       /divided by 0/ => MESSAGE_DICTIONARY[:zero_division_error][:divide_by_zero],
       /.*/           => :no_result
+    ],
+
+    load_error: HumanistErrors::RegexHash[
+      /no such file to load/ => MESSAGE_DICTIONARY[:load_error][:no_file],
+      /.*/                   => :no_result
     ]
   }
 end

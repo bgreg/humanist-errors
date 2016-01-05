@@ -1,7 +1,7 @@
 :syntax_error:
   :unexpected_semi_colon: "oops"
-  :open_quote: "oop"
-  :string_formatter: "oop"
+  :open_quote: "oops"
+  :string_formatter: "oops"
   :missing_argument: "oops"
   :missing_block_closer: "oops"
 
