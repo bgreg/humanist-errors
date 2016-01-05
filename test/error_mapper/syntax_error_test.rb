@@ -8,7 +8,7 @@ class SyntaxErrorTest < Minitest::Test
   end
 
   def test_message_for_unterminated_string_meets_end_of_file
-     assert_error_map("unterminated string meets end of file", :syntax_error,  :open_quote)
+    assert_error_map("unterminated string meets end of file", :syntax_error,  :open_quote)
   end
 
   def test_message_for_single_percent_sign
