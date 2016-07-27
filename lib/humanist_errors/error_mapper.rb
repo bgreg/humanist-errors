@@ -6,6 +6,7 @@ module HumanistErrors
       /unterminated quoted string meets end of file/                 => MESSAGE_DICTIONARY[:syntax_error][:string_formatter],
       /syntax error, unexpected end-of-input, expecting keyword_end/ => MESSAGE_DICTIONARY[:syntax_error][:missing_block_closer],
       /syntax error, unexpected end-of-input/                        => MESSAGE_DICTIONARY[:syntax_error][:missing_argument],
+      /syntax error, unexpected tIDENTIFIER/                         => MESSAGE_DICTIONARY[:syntax_error][:t_identifier],
       /.*/                                                           => :no_result
     ],
     no_method_error: HumanistErrors::RegexHash[

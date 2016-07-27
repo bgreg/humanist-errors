@@ -7,7 +7,7 @@
 Humanist errors is a system for extending ruby exception messages.  It will prepend the standard output with text
 defined in the humanist errors dictionary that hopefully explains what is going on a little better.
 
-Some examples: 
+Some examples:
 
 ![img](https://cloud.githubusercontent.com/assets/3711139/11139081/9ed4493a-897f-11e5-8589-79a4e5930c94.png)
 ![img](https://cloud.githubusercontent.com/assets/3711139/11139050/3ccefb40-897f-11e5-8024-9062ce4787bf.png)
@@ -50,7 +50,7 @@ your code inside a special code block.
   `require 'humanist_errors'`
 
   `require 'humanist_errors/monkey'`
-  
+
 2. Include the humanist errors module:
 
   `include HumanistErrors`
@@ -71,38 +71,3 @@ This gem is intended for use in development and test environments only.
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
-
-
-## TODO
-1) add more errors from this list to the error_map
-
-##### High level exception tree:
-
-```ruby
-Exception
-  NoMethodError
-  ScriptError
-    LoadError
-    NotImplementedError
-    SyntaxError
-  SignalException
-    Interrupt
-  StandardError
-    ArgumentError
-    IOError
-      EOFError
-    IndexError
-    LocalJumpError
-    NameError
-      NoMethodError
-    RangeError
-      FloatDomainError
-    RuntimeError
-    SecurityError
-    SystemCallError
-    SystemStackError
-    ThreadError
-    ZeroDivisionError
-  SystemExit
-  fatal
-```

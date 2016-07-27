@@ -11,11 +11,23 @@ class SyntaxErrorTest < Minitest::Test
     error_message = human_fork(SyntaxError) do
       eval(
         " def stuff
-            opps = 'I did it again'
+            oops = 'I did it again'
         "
       )
     end
     expected_message = HumanistErrors::MESSAGE_DICTIONARY[:syntax_error][:missing_block_closer]
+    assert_match(expected_message, error_message)
+  end
+
+  def test_message_for_unexpected_identifier
+    error_message = human_fork(SyntaxError) do
+      eval %q(
+        one = 1
+        two = 2
+        product = one * two _2
+      )
+    end
+    expected_message = HumanistErrors::MESSAGE_DICTIONARY[:syntax_error][:t_identifier]
     assert_match(expected_message, error_message)
   end
 end
